@@ -1,0 +1,6 @@
+
+<% @posts.each do |post| %>
+  <h2><%= post.title %></h2>
+  <h6>by: <%= post.author %>
+  <%= simple_format post.body %>
+<% end %>
