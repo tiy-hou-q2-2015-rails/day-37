@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+
+  get "/me" => 'api/customers#show'
+
+  get "/transactions" => 'api/transactions#index'
+
+  post "/transactions" => 'api/transactions#create'
+
+  post "/auth" => 'api/session#create'
+  delete "/auth" => 'api/session#delete'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
