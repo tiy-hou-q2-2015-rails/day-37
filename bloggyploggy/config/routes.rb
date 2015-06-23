@@ -1,6 +1,16 @@
 Rails.application.routes.draw do
   root 'home#index'
 
+  get "/api/posts" => 'api/posts#index'
+  get "/api/posts/:id" => 'api/posts#show'
+  post "/api/posts" => 'api/posts#create'
+  put "/api/posts/:id" => 'api/posts#update'
+  patch "/api/posts/:id" => 'api/posts#update'
+  delete "/api/posts/:id" => 'api/posts#delete'
+
+  post "/api/comments" => 'api/comments#create'
+  delete "/api/comments/:id" => 'api/comments#delete'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
